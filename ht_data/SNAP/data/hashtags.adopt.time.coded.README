@@ -1,0 +1,10 @@
+FORMAT:
+ * 1: userid
+ * 2: tagid (according to the ordering in tagfn)
+ * 3: time user first posted the ht
+ * 4: time user's earliest parent posted the ht
+ * 5: number of messages (in the same topic) since first parent tweeted ht
+ * 6: time since first first parent posted the ht
+ * 7: number of usages
+ * 8: number of parents who adopted before me
+ * 9: fraction of parents who adopted before me

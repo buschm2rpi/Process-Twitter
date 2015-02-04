@@ -1,0 +1,15 @@
+#!/bin/bash
+
+export DATASETALL=$1
+export DATANAMEALL=$2
+
+export SCRIPTDIR=/local/home/student/mbusch/Matlab/Scripts/ProcessLatency
+
+bash $SCRIPTDIR/wrapperSINGLE.sh $DATASETALL $DATANAMEALL LDA VOTE 0 $3
+bash $SCRIPTDIR/wrapperSINGLE.sh $DATASETALL $DATANAMEALL LDA NB 0 $3
+bash $SCRIPTDIR/wrapperSINGLE.sh $DATASETALL $DATANAMEALL LDA NB SUBGRAPHS $3
+bash $SCRIPTDIR/wrapperSINGLE.sh $DATASETALL $DATANAMEALL NB VOTE 0 $3
+bash $SCRIPTDIR/wrapperSINGLE.sh $DATASETALL $DATANAMEALL NB NB 0 $3
+bash $SCRIPTDIR/wrapperSINGLE.sh $DATASETALL $DATANAMEALL NB NB SUBGRAPHS $3
+
+# Example: 'bash wrapperALL.sh SNAP log_latency all'
